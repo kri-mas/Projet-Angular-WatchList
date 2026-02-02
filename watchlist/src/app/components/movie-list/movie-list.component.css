@@ -20,3 +20,16 @@
   width: 100%;
 }
 }
+
+.title {
+  margin: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.title::before {
+  content: "▌";
+  color: #E50914;
+  margin-right: 8px;
+}
