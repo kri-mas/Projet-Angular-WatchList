@@ -3,17 +3,11 @@ import { CommonModule } from '@angular/common';
 import { MovieService } from '../../services/movie.service';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { Input, Output, EventEmitter } from '@angular/core';
-@Component({
-  selector: 'app-movie-list',
-  standalone: true,
-  imports: [CommonModule, MovieCardComponent],
-import { MovieService } from '../../services/movie.service';
-import { MovieCardComponent } from '../movie-card/movie-card.component';
 
 @Component({
   selector: 'app-movie-list',
   standalone: true,
-  imports: [MovieCardComponent],
+  imports: [MovieCardComponent, MovieService],
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.css']
 })
