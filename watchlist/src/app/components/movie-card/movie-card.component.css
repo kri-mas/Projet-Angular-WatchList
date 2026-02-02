@@ -1,0 +1,61 @@
+.card {
+  width: 200px;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 10px;
+}
+
+.content h3 {
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rating {
+  color: gold;
+  margin: 5px 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.actions button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #777;
+  color: white;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: white;
+  color: black;
+}
+
+/* État vu */
+.watched {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
