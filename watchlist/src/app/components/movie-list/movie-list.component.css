@@ -1,9 +1,11 @@
+.movie-list-container {
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
+.movies-grid {
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -15,6 +17,8 @@
   color: #777;
   font-size: 1.2rem;
   text-align: center;
+  width: 100%;
+}
 }
 
 .title {
