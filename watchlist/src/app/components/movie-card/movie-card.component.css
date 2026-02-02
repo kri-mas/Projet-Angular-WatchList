@@ -67,9 +67,23 @@
   color: black;
 }
 
-.card.watched {
-  opacity: 0.5;
+
+
+.card.watched img:hover {
   filter: grayscale(100%);
-} 
- 
-  
+  opacity: 0.5;
+}
+
+.watched-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #3bf801;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  z-index: 20;
+}
+
+

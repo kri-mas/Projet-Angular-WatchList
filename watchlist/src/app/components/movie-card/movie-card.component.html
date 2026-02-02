@@ -1,5 +1,9 @@
-<div class="card" [class.watched]="movie.isWatched">
-<img [src]="movie.image" [alt]="movie.title" />
+<div class="card" [class.watched]="isWatched">
+  
+  <!-- Badge Vu -->
+  <div class="watched-badge" *ngIf="isWatched">Vu</div>
+
+  <img [src]="movie.image" [alt]="movie.title" />
 
   <div class="content">
     <h3>{{ movie.title }} ({{ movie.year }})</h3>
@@ -13,7 +17,7 @@
     <div class="actions">
       <button (click)="rate.emit(1)">+</button>
       <button (click)="rate.emit(-1)">−</button>
-      <button (click)="toggle.emit(movie.id)">👁</button>
+      <button (click)="onToggleWatched()">👁</button>
       <button (click)="delete.emit(movie.id)">🗑</button>
     </div>
   </div>
