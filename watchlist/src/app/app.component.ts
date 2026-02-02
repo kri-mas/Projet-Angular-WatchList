@@ -11,7 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
   styleUrls: ['./app.component.css'] // <-- attention, c'est styleSUrls et non styleUrl
 })
 export class AppComponent {
-  }
+  
   title = 'watchlist';
 }
 
