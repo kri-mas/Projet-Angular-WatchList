@@ -4,7 +4,6 @@ import { Movie } from '../../models/movie.model';
 @Component({
   selector: 'app-movie-card',
   standalone: true,
-  import:[Movie],
   templateUrl: './movie-card.component.html',
   styleUrl: './movie-card.component.css'
 })
