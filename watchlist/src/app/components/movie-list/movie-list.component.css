@@ -4,7 +4,6 @@
   padding: 20px;
 }
 
-.movies-grid {
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -18,7 +17,7 @@
   text-align: center;
   width: 100%;
 }
-}
+
 
 .title {
   margin: 20px;

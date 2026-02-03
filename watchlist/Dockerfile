@@ -1,13 +1,33 @@
-FROM node:20-alpine
+# ===== 1. BUILD ANGULAR =====
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
+# Copier les fichiers de dépendances
 COPY package*.json ./
 
-RUN npm install -g @angular/cli && npm install
+# Installer les dépendances
+RUN npm install
 
+# Copier tout le projet
 COPY . .
 
-EXPOSE 4200
+# Build Angular (prod)
+RUN npm run build
 
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+
+# ===== 2. SERVE WITH NGINX =====
+FROM nginx:alpine
+
+# Supprimer la config par défaut
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Ajouter notre config nginx
+COPY nginx.conf /etc/nginx/conf.d
+
+# Copier le build Angular
+COPY --from=build /app/dist/watchlist/browser /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
